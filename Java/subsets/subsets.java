@@ -1,12 +1,3 @@
-/**
- *
- * Given an array with no duplicates, return all of its subsets
- * e.g. Given [1, 2, 3]
- * Return [[1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3], []]
- *
- */
-
-
  import java.util.Collections;
  import java.util.ArrayList;
 
