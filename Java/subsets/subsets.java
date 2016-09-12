@@ -11,10 +11,6 @@
  import java.util.ArrayList;
 
  class Solution {
-     /**
-      * @param S: A set of numbers.
-      * @return: A list of lists. All valid subsets.
-      */
 
     public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> S) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
