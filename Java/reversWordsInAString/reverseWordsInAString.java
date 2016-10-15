@@ -10,6 +10,6 @@ public class Solution {
                 result.append(splited[i]).append(" ");
             }
         }
-        return result.length() == 0 ? "" : result.substring(0, result.length()- 1);
+        return result.length() == 0 ? "" : result.substring(0, result.length() - 1);
     }
 }
