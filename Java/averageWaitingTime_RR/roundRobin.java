@@ -1,9 +1,9 @@
 public class process {
-    int arriveTime;
-    int excuteTime;
+    int arrTime;
+    int excTime;
     process(int arr, int exc) {
-        arriveTime = arr;
-        excuteTime = exc;
+        arrTime = arr;
+        excTime = exc;
     }
 }
 
@@ -17,8 +17,8 @@ public double roundRobin(int[] arrive, int[] excute, int q) {
     while (!queue.isEmpty() || nextProIdx < arrive.length) {
         if (!queue.isEmpty()) {
             process cur = queue.poll();
-            waitTime += curTime - cur.arriveTime;
-            curTime += Math.min(cur.excuteTime, q);
+            waitTime += curTime - cur.arrTime;
+            curTime += Math.min(cur.excTime, q);
 
             for (int i = nextProIdx; i < arrive.length; i ++) {
                 if (arrive[i] <= curTime) {
@@ -32,7 +32,7 @@ public double roundRobin(int[] arrive, int[] excute, int q) {
             if (cur.excuteTime > q) {
                 queue.offer(new process(curTime, cur.excuteTime - q);
             }
-            
+
         } else {
             queue.offer(new process(arrive[nextProIdx], excute[nextProIdx]));
             curTime = arrive[nextProIdx++];
