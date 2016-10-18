@@ -10,7 +10,7 @@ Given
 ```
 
 Return
-`2`
+`3`
 
 # Solution
  - Recursion
