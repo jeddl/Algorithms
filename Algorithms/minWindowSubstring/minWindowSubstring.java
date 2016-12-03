@@ -5,7 +5,7 @@ public class Solution {
         
         int[] targetHash = new int[256];
         int[] sourceHash = new int[256];
-        // j is the right side of the window
+        // j is the end of the window
         int j = 0;
         
         iniTargetHash(targetHash, target);
