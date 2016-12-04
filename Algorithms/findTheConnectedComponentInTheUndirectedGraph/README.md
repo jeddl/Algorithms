@@ -19,5 +19,4 @@ Return `{A,B,D}, {C,E}`. Since there are two connected component which are `{A,B
 - BFS
 - Union Find
  - Note: HashSet can avoid duplicates
- - 
  
