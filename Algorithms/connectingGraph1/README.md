@@ -1,3 +1,5 @@
+# Connecting Graph 1
+## Example
 Given n nodes in a graph labeled from 1 to n. There is no edges in the graph at beginning.
 
 You need to support the following method:
