@@ -12,4 +12,4 @@ push(3)
 top()     // return 2
 pop()     // return 2
 ```
-
+`LintCode Copyright`
