@@ -53,6 +53,7 @@ class UnionFind
         foreach(var s in set)
         {
             parent[s] = s;
+            _count++;
         }
     }
 
