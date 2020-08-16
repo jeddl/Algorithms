@@ -16,7 +16,7 @@ class Promise {
       if(this.status ===  PENDING) {
         this.status = FULFILLED;
         this.value = value;
-        // 依次将对应的函数执行
+        // Execute each function
         this.onResolvedCallbacks.forEach(fn=>fn());
       }
     }
@@ -25,7 +25,7 @@ class Promise {
       if(this.status ===  PENDING) {
         this.status = REJECTED;
         this.reason = reason;
-        // 依次将对应的函数执行
+        // Execute each function
         this.onRejectedCallbacks.forEach(fn=>fn());
       }
     }
@@ -47,12 +47,14 @@ class Promise {
     }
 
     if (this.status === PENDING) {
-      // 如果promise的状态是 pending，需要将 onFulfilled 和 onRejected 函数存放起来，等待状态确定后，再依次将对应的函数执行
+      // If the status of promise is pending, onFulfilled and onRejected functions will not be executed
+      // until the status is determined.
       this.onResolvedCallbacks.push(() => {
         onFulfilled(this.value)
       });
 
-      // 如果promise的状态是 pending，需要将 onFulfilled 和 onRejected 函数存放起来，等待状态确定后，再依次将对应的函数执行
+
+      // Same here
       this.onRejectedCallbacks.push(()=> {
         onRejected(this.reason);
       })
